@@ -1,7 +1,7 @@
 import pyautogui as pag
 import keyboard as kb
+import time
 import asyncio
-
 cycles = 0
 
 async def box():
@@ -10,18 +10,19 @@ async def box():
   evo_box = pag.locateOnScreen("C:\\Users\\menno\\OneDrive\\Coding\\Python\\Auto-Box\\img\\evo-box.png", confidence=0.5)
   take_evo_box = pag.locateOnScreen("C:\\Users\\menno\\OneDrive\\Coding\\Python\\Auto-Box\\img\\take-btn.png", confidence=0.65)
   cycles += 1
-  if box is not None:
-    print("INFO: found normal box.")
-    pag.moveTo(box)
+  if take_evo_box is not None:
+    print("INFO: found 'take it'.")
+    pag.moveTo(take_evo_box)
     pag.leftClick()
   elif evo_box is not None:
     print("INFO: found evolution box.")
     pag.moveTo(evo_box)
     pag.leftClick()
-  elif take_evo_box is not None:
-    print("INFO: found 'take it'.")
-    pag.moveTo(take_evo_box)
+  elif box is not None:
+    print("INFO: found normal box.")
+    pag.moveTo(box)
     pag.leftClick()
+  
 
 async def berry():
   blueBerry = pag.locateOnScreen("C:\\Users\\menno\\OneDrive\\Coding\\Python\\Auto-Box\\img\\berry-blue.png", confidence=0.5)
@@ -39,6 +40,8 @@ async def berry():
     print("INFO: found yellow berry.")
     pag.moveTo(yellowBerry)
     pag.leftClick()
+time.sleep(2)
+print("INFO: 'bot' has started.")
 
 while kb.is_pressed('q') == False:
   asyncio.run(box())
