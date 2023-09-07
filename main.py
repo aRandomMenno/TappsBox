@@ -7,44 +7,44 @@ cycles = 0
 async def box():
   global cycles
   box = pag.locateOnScreen("C:\\Users\\menno\\OneDrive\\Coding\\Python\\Auto-Box\\img\\box.png", confidence=0.4)
-  evo_box = pag.locateOnScreen("C:\\Users\\menno\\OneDrive\\Coding\\Python\\Auto-Box\\img\\evo-box.png", confidence=0.5)
-  take_evo_box = pag.locateOnScreen("C:\\Users\\menno\\OneDrive\\Coding\\Python\\Auto-Box\\img\\take-btn.png", confidence=0.65)
+  evo_box = pag.locateOnScreen("C:\\Users\\menno\\OneDrive\\Coding\\Python\\Auto-Box\\img\\evo-box.png", confidence=0.55)
+  take_evo_box = pag.locateOnScreen("C:\\Users\\menno\\OneDrive\\Coding\\Python\\Auto-Box\\img\\take-btn.png", confidence=0.55)
   cycles += 1
-  if take_evo_box is not None:
-    print("INFO: found 'take it'.")
-    pag.moveTo(take_evo_box)
-    pag.leftClick()
-  elif evo_box is not None:
-    print("INFO: found evolution box.")
-    pag.moveTo(evo_box)
-    pag.leftClick()
-  elif box is not None:
-    print("INFO: found normal box.")
+  if box is not None:
+    print("INFO: Normal box.")
     pag.moveTo(box)
     pag.leftClick()
-  
+  elif evo_box is not None:
+    print("INFO: Evolution box.")
+    pag.moveTo(evo_box)
+    pag.leftClick()
+  elif take_evo_box is not None:
+    print("INFO: 'take it' btn.")
+    pag.moveTo(take_evo_box)
+    pag.leftClick()
 
 async def berry():
-  blueBerry = pag.locateOnScreen("C:\\Users\\menno\\OneDrive\\Coding\\Python\\Auto-Box\\img\\berry-blue.png", confidence=0.5)
-  redBerry = pag.locateOnScreen("C:\\Users\\menno\\OneDrive\\Coding\\Python\\Auto-Box\\img\\berry-red.png", confidence=0.5)
-  yellowBerry = pag.locateOnScreen("C:\\Users\\menno\\OneDrive\\Coding\\Python\\Auto-Box\\img\\berry-yellow.png", confidence=0.5)
+  blueBerry = pag.locateOnScreen("C:\\Users\\menno\\OneDrive\\Coding\\Python\\Auto-Box\\img\\berry-blue.png", confidence=0.45)
+  redBerry = pag.locateOnScreen("C:\\Users\\menno\\OneDrive\\Coding\\Python\\Auto-Box\\img\\berry-red.png", confidence=0.45)
+  yellowBerry = pag.locateOnScreen("C:\\Users\\menno\\OneDrive\\Coding\\Python\\Auto-Box\\img\\berry-yellow.png", confidence=0.45)
   if blueBerry is not None:
-    print("INFO: found blue berry.")
+    print("INFO: Blue berry.")
     pag.moveTo(blueBerry)
     pag.leftClick()
   elif redBerry is not None:
-    print("INFO: found red berry.")
+    print("INFO: Red berry.")
     pag.moveTo(redBerry)
     pag.leftClick()
   elif yellowBerry is not None:
-    print("INFO: found yellow berry.")
+    print("INFO: Yellow berry.")
     pag.moveTo(yellowBerry)
     pag.leftClick()
+
 time.sleep(2)
-print("INFO: 'bot' has started.")
+print("START: Succesfully started 'bot'.")
 
 while kb.is_pressed('q') == False:
   asyncio.run(box())
-  if cycles >= 50:
+  if cycles >= 5:
     asyncio.run(berry())
     cycles = 0
