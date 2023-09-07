@@ -9,6 +9,11 @@
 4. You should make your own screenshots, and modify the file path for your own computer
 5. Now if you've done it correctly you can run the program.
 
+## TODO:
+
+1. Add a pause keybind. (idk how yet.)
+2. make it so bot automaticly gives to the alien.
+
 ## Auto-Box
 
 * Uses some *Magic* to automaticly do things in a couple of specific games.
