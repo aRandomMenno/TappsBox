@@ -57,13 +57,12 @@ async def berry():
     pag.leftClick()
 
 #* Waiting for 3 seconds before starting the bot
+print("START: Starting in 3 seconds.")
 time.sleep(3)
 print("START: Succesfully started 'bot'.")
 
 #* Making sure you can stop the bot from running by pressing / holding the 'q' for a bit
 while kb.is_pressed('q') == False:
-  #* Making sure you can pause the bot by pressing / holding the 's' for a bit
-  while kb.is_pressed('s') == False:
     asyncio.run(box())
     #* Running the berry function every 5 cycles
     if cycles >= 5:
