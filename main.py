@@ -14,9 +14,9 @@ async def box():
   global cycles
   
   #* Locating the box, evo_box, and take_evo_box images on the screen
-  box = pag.locateOnScreen("C:\\Users\\menno\\OneDrive\\Coding\\Python\\Auto-Box\\img\\box.png", confidence=0.4)
-  evo_box = pag.locateOnScreen("C:\\Users\\menno\\OneDrive\\Coding\\Python\\Auto-Box\\img\\evo-box.png", confidence=0.5)
-  take_evo_box = pag.locateOnScreen("C:\\Users\\menno\\OneDrive\\Coding\\Python\\Auto-Box\\img\\take-btn.png", confidence=0.5)
+  box = pag.locateOnScreen("C:\\Users\\menno\\OneDrive\\Coding\\Python\\Auto-Box\\img\\box.png", confidence=0.425)
+  evo_box = pag.locateOnScreen("C:\\Users\\menno\\OneDrive\\Coding\\Python\\Auto-Box\\img\\evo-box.png", confidence=0.6)
+  take_evo_box = pag.locateOnScreen("C:\\Users\\menno\\OneDrive\\Coding\\Python\\Auto-Box\\img\\take-btn.png", confidence=0.6)
   
   #* Incrementing cycles by 1
   cycles += 1
@@ -61,11 +61,13 @@ print("START: Starting in 3 seconds.")
 time.sleep(3)
 print("START: Succesfully started 'bot'.")
 
-#* Making sure you can stop the bot from running by pressing / holding the 'q' for a bit
+#* Making sure you can stop the bot from running by pressing / holding the 'q' AND 's' at the same time a bit.
 while kb.is_pressed('q') == False:
-    asyncio.run(box())
-    #* Running the berry function every 5 cycles
-    if cycles >= 5:
-      asyncio.run(berry())
-      #* Resetting cycles to 0
-      cycles = 0
+  #* Making sure you can pause the bot by pressing / holding the 'q' for a bit
+    while kb.is_pressed('q') == False:
+      asyncio.run(box())
+      #* Running the berry function every 5 cycles
+      if cycles >= 5:
+        asyncio.run(berry())
+        #* Resetting cycles to 0
+        cycles = 0

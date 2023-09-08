@@ -11,8 +11,14 @@
 
 ## TODO:
 
-1. Add a pause keybind. (idk how yet.)
-2. make it so bot automaticly gives to the alien.
+1. make it so bot automaticly gives to the alien.
+
+## features:
+
+1. Auto opens boxes,
+2. Auto clicks berries,
+3. The bot by holding 's',
+4. Quit by holding 'q' & 's' together to.
 
 ## Auto-Box
 
