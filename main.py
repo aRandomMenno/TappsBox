@@ -45,9 +45,9 @@ async def berry():
     pag.leftClick()
 
 #! Waiting for 3 seconds before starting the bot
-print("START: Starting in 3 seconds.")
+print("INFO: Starting in 3 seconds.")
 time.sleep(3)
-print("START: Succesfully started script.")
+print("INFO: Succesfully started script.")
 
 #! Making sure you can stop the script from running by pressing / holding the 'q' AND 's' at the same time.
 while kb.is_pressed('q') == False:
@@ -58,4 +58,4 @@ while kb.is_pressed('q') == False:
         asyncio.run(berry())
         cycles = 0
 
-print("STOP: Stopped the script succesfully.")
+print("INFO: Stopped the script succesfully.")

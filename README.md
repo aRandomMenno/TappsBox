@@ -1,28 +1,35 @@
-# Python powered Bot for a couple of specific games
+# Automaticly opens boxes in tapps evolution games, using this program.
 
-* You will need some software to clone your android phone screen to your computer, I personally use [srcpy](https://github.com/Genymobile/scrcpy)
-  * Make sure you usb debugging **enabled** on your android phone!
+## What you need:
 
-1. To get this 'bot' working first install python from `https://www.python.org/downloads/`
-2. Once installed open command prompt and type `pip install pyautogui`, `pip install keyboard` & `pip install opencv-python`
-3. Download the code (as zip) from this github page and extract it in an empty folder.
-4. You should make your own screenshots, and modify the file path for your own computer
-5. Now if you've done it correctly you can run the program.
+- And a computer with a program to mirror your screen to your computer. I use [scrcpy](https://github.com/Genymobile/scrcpy) for this.
+  - using this method might require USB-debugging to be **enabled**.
+- Python 3.11.x+ [download](https://www.python.org/downloads/) with the following library's:
+  - pyautogui
+  - keyboard
+  - opencv-python
 
-## TODO:
+### **OR**
 
-1. make it so bot automaticly gives to the alien.
+- A computer with an android emulator.
+  - e.g. bluestacks.
+- Python 3.11+ [download](https://www.python.org/downloads/) with the following library's:
+  - pyautogui
+  - keyboard
+  - opencv-python
+
+## What does it do exactly and how to run it?
+
+1. To run the program you'll need to download the code and extract it into an empty folder.
+2. Then mirror your screen to your computer or open your android emulator with one of tapps games evolution games.
+3. Modify the path of the images in `main.py` by right clicking and pressing 'open with' and opening it in a text editor.
+4. Run the `main.py` file in the folder you extracted the files into.
 
 ## features:
 
-1. Auto opens boxes,
-2. Auto clicks berries,
-3. The bot by holding 's',
-4. Quit by holding 'q' & 's' together to.
+- Exit by holding Q & S.
+- Pause by holding S.
 
-## Auto-Box
+## IDEA'S:
 
-* Uses some *Magic* to automaticly do things in a couple of specific games.
-* The code was orginally written with **python 3.11.5** & **pyautogui 0.9.54**
-* This does not mean you absolutely need to use those version but it might stop working on later python versions in the *far* *far* *far* future.
-* I might or might not actually maintain this repository.
+1. Make it so program automaticly gives to the alien.
