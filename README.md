@@ -1,10 +1,10 @@
-# Automaticly opens boxes in tapps evolution games, using this program.
+# Automatically opens boxes in tapps evolution games, using this program.
 
-> A program that will automaticly open boxes in tapps evolution simulator games.
+> A program that will automatically open boxes in tapps evolution simulator games.
 
 ## What you need:
 
-- And a computer with a program to mirror your screen to your computer. I use [scrcpy](https://github.com/Genymobile/scrcpy) for this.
+- A computer with a program to mirror your screen to your computer. I use [scrcpy](https://github.com/Genymobile/scrcpy) for this.
   - using this method might require USB-debugging to be **enabled**.
 - Python 3.11 or higher [download Python](https://www.python.org/downloads/) with the following library's:
   - pyautogui
@@ -32,6 +32,6 @@
 - Exit by holding Q & S.
 - Pause by holding S.
 
-## IDEA'S:
+### IDEA'S:
 
-1. Make it so program automaticly gives to the alien. But I have not figured out how.
+1. Make it so program automatically gives to the alien. But I have not figured out how.
