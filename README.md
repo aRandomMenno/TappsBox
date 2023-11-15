@@ -1,10 +1,12 @@
 # Automaticly opens boxes in tapps evolution games, using this program.
 
+> A program that will automaticly open boxes in tapps evolution simulator games.
+
 ## What you need:
 
 - And a computer with a program to mirror your screen to your computer. I use [scrcpy](https://github.com/Genymobile/scrcpy) for this.
   - using this method might require USB-debugging to be **enabled**.
-- Python 3.11.x+ [download](https://www.python.org/downloads/) with the following library's:
+- Python 3.11 or higher [download Python](https://www.python.org/downloads/) with the following library's:
   - pyautogui
   - keyboard
   - opencv-python
@@ -13,7 +15,7 @@
 
 - A computer with an android emulator.
   - e.g. bluestacks.
-- Python 3.11+ [download](https://www.python.org/downloads/) with the following library's:
+- Python 3.11 or higher [download Python](https://www.python.org/downloads/) with the following library's:
   - pyautogui
   - keyboard
   - opencv-python
@@ -32,4 +34,4 @@
 
 ## IDEA'S:
 
-1. Make it so program automaticly gives to the alien.
+1. Make it so program automaticly gives to the alien. But I have not figured out how.
